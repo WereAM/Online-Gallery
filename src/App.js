@@ -1,22 +1,39 @@
 import './App.css';
-import LandingPage from './landing';
-// import { Link } from "react-router-dom";
-import NavBar from './navbar';
-// import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import LandingPage from './pages/landing';
+import NavBar from './components/navbar';
+import HomePage from './pages/home';
+import UsersPage from './pages/users';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import AlbumsPage from './pages/albums';
 
 export default function App() {
   return (
-    <div className="App">
-      
-      <header className="App-header">
-        <NavBar />
-      </header>
-
-      <main className='App-main'>
-        <LandingPage />
-      </main>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<MainLayout />} >
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/home' element={<HomePage />} />
+          <Route path='/users' element={<UsersPage />} />
+          <Route path='/albums' element={<AlbumsPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
+
+  function MainLayout(){
+    return(
+      <>
+        <header className="App-header">
+          <NavBar />
+        </header>
+
+        <main className='App-main'>
+          <Outlet />
+        </main>
+      </>
+    );     
+  } 
+
 
 
