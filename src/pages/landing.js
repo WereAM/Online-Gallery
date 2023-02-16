@@ -2,19 +2,14 @@ export default function LandingPage (){
     return (
         <>
         <div className="landing-content">
-            <h>This app fetches data <br /> from a JSON placeholder <br /> and displays to users</h>
+            <h>All your photos <br /> and albums <br /> in one place</h>
             <img src="https://m.media-amazon.com/images/I/71eOgACsdQL._AC_SL1500_.jpg"  alt=""/>
-            <p>Login to view content.</p>
+            <p>An Online Gallery.</p>
             <button>LOGIN</button>
-        </div>
-
-        {/* <div>
-            <img src="https://m.media-amazon.com/images/I/71eOgACsdQL._AC_SL1500_.jpg"  alt=""/>
-        </div> */}
-        
+        </div>        
         
         <footer>
-            <a href="/">CONTACTS</a>
+            <h3>CONTACTS</h3>
             <p>Author: Michelle Were</p>
             <p>Mail to : thisproject@gmail.com.com</p>
             <p>Phone: +1 234-566-456</p>
