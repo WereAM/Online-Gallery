@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/footer";
 
 export default function LandingPage (){
 
@@ -10,18 +11,16 @@ export default function LandingPage (){
     return (
         <>
         <div className="landing-content">
-            <h>All your photos <br /> and albums <br /> in one place</h>
-            <img src="https://m.media-amazon.com/images/I/71eOgACsdQL._AC_SL1500_.jpg"  alt=""/>
-            <p>An Online Gallery.</p>
-            <button onClick={handleClick}>LOGIN</button>
-        </div>        
+            <p id ='hotshot'>All your <br /> photos and albums <br /> in one place</p>
+            <p id="extra">An Online Gallery.</p>
+            <img className="img1" src="https://m.media-amazon.com/images/I/71eOgACsdQL._AC_SL1500_.jpg"  alt=""/>
+            <img  className="img2" src="http://macarthurpolsatschool.org.au/wp-content/uploads/2018/10/gallery-film-strips.jpg" alt=""/>
+            <img className="img3" src="https://enviragallery.com/wp-content/uploads/2015/12/photoalbumsinwordpress.jpg" alt="" />
+            <button onClick={handleClick}>Continue To Gallery</button>
+        </div>
+
+        <Footer />
         
-        <footer>
-            <h3>CONTACTS</h3>
-            <p>Author: Michelle Were</p>
-            <p>Mail to : thisproject@gmail.com.com</p>
-            <p>Phone: +1 234-566-456</p>
-        </footer>
         </>
     )
 }
