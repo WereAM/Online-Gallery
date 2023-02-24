@@ -13,11 +13,11 @@ export default function LoginPage ({Login, error}){
 
     return(
         <div className='form'>
-        <div className="login">
+            <div className="login">
 
-            <div className="userIcon">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="" width='200' height='200'></img>
-            </div>
+                <div className="userIcon">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="" width='200' height='200'></img>
+                </div>
 
             <form className="loginForm" onSubmit={handleClick}>
                 <label> Name: </label>
