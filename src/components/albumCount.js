@@ -19,12 +19,10 @@ const AlbumCount = ({id}) => {
     }
 
     return(
-        <>
         <div>
             <p>{albumCount} Albums </p>
             <button className='viewAlbums' onClick={handleClick}>View Albums</button>
         </div> 
-        </>
     )
 }
 

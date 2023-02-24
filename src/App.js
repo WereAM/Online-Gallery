@@ -5,6 +5,7 @@ import HomePage from './pages/home';
 import UsersPage from './pages/users';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import AlbumsPage from './pages/albums';
+import DefaultUser from './components/defaultUser';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path='/home' element={<HomePage />} />
           <Route path='/users' element={<UsersPage />} />
           <Route path='/albums' element={<AlbumsPage />} />
+          <Route path='/login' element={<DefaultUser />} />
         </Route>
       </Routes>
     </>
