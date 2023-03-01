@@ -134,6 +134,7 @@ footer p{
   top: 25%;
   left: 35%;
 }
+
 .login{
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
@@ -161,9 +162,12 @@ footer p{
 .loginBtn{
   margin-bottom: 50px;
   width: 400px;
-  height: 50px;
+  height: 80px;
   margin: 50px;
   font-size: 20px;
+  border-radius: 7px;
+  background-color: lightslategray;
+  color: white;
 }
 
 .loginBtn:hover{
@@ -172,4 +176,8 @@ footer p{
 
 .loginForm p{
   color: red;
+}
+
+.userIcon {
+  border-radius: 50%;
 }
