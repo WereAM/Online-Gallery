@@ -1,4 +1,12 @@
+import { useContext } from 'react';
+import { UserContext } from '../components/UserContext';
+
+
 export default function HomePage(){
+
+    const {user} = useContext(UserContext);
+
+    // {user!== ''}
     return(
         <>
         <div className="landing-content">

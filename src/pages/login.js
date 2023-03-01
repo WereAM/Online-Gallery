@@ -1,17 +1,16 @@
-
 import React, {useState} from 'react';
 
 export default function LoginPage ({Login, error}){
 
     const [details, setDetails] = useState({name: '', password: ''});
 
-    const handleClick = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         Login(details);
-        }
-    
+    }
 
     return(
+        
         <div className='form'>
             <div className="login">
 
@@ -19,7 +18,7 @@ export default function LoginPage ({Login, error}){
                     <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="" width='200' height='200'></img>
                 </div>
 
-            <form className="loginForm" onSubmit={handleClick}>
+            <form className="loginForm" onSubmit={handleSubmit}>
                 <label> Name: </label>
                 <br/>
                 <input 

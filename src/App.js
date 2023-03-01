@@ -6,10 +6,14 @@ import UsersPage from './pages/users';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import AlbumsPage from './pages/albums';
 import DefaultUser from './components/defaultUser';
+import { ContextWrapper } from './components/UserContext';
+
 
 export default function App() {
+ 
   return (
     <>
+     <ContextWrapper>
       <Routes>
         <Route path='/' element={<MainLayout />} >
           <Route path='/' element={<LandingPage />} />
@@ -19,6 +23,7 @@ export default function App() {
           <Route path='/login' element={<DefaultUser />} />
         </Route>
       </Routes>
+      </ContextWrapper>
     </>
   );
 }
@@ -36,6 +41,3 @@ export default function App() {
       </>
     );     
   } 
-
-
-
