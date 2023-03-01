@@ -8,8 +8,9 @@ export default function HomePage(){
 
     const navigate = useNavigate();
     const handleClick = () => {
-        {(!user) ? navigate('/login') : navigate('/users')}
+        (!user) ? navigate('/login') : navigate('/users')
     }
+    
     return(
         <>
         <div className="landing-content">
