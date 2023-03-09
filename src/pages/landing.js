@@ -10,9 +10,9 @@ export default function LandingPage (){
     return (
         <>
         <div className="landing-content">
-            <h>All your photos <br /> and albums <br /> in one place</h>
+            <p id ='hotshot'>All your photos <br /> and albums <br /> in one place</p>
             <img src="https://m.media-amazon.com/images/I/71eOgACsdQL._AC_SL1500_.jpg"  alt=""/>
-            <p>An Online Gallery.</p>
+            <p id="extra">An Online Gallery.</p>
             <button onClick={handleClick}>LOGIN</button>
         </div>        
         

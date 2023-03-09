@@ -5,26 +5,25 @@ import { useContext } from 'react';
 import { UserContext } from '../components/UserContext';
 
 export default function UsersPage(){
-    const {user} = useContext(UserContext);
-
+    const {session} = useContext(UserContext);
+    
     const [state, setState] = useState([])
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(users =>
             setState(users));
-    },[]);
-
+        },[session])
     
-    return (
+        return (
         <>
         <div className="users">
-            <p>{user.name}</p>
-            <h1>Users:</h1>
+            
+            <h1>Users: {(session)}</h1>
             <div className='usersList'>               
                 {state.map((item, index)=>(
-                    <div className='userDetails'> 
-                        <ListItem item={item} key={index} />
+                    <div className='userDetails' key={index}> 
+                        <ListItem item={item} />
                         <AlbumCount id={item.id} />
                     </div>
                 ))}
