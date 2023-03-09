@@ -1,3 +1,7 @@
+/* html,*{
+  overflow-x: hidden;
+} */
+
 .App {
   text-align: center;
   min-width: 100vw;
@@ -5,22 +9,17 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 8vh;
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
   font-size: medium;
   color: white;
+  overflow: hidden;
 } 
 
-.logo{
-  margin-top: 5px;
-  position: absolute;
-  left: 5%;
-}
-
 a{
-  padding: 20px;
+  padding-inline: 20px;
   color: white;
 }
 
@@ -28,15 +27,16 @@ a{
   min-height: 90vh;
   background-color: lightslategrey;
   overflow: hidden;
+  min-width: 100vw;
 }
 
 .landing-content{
   position: relative;
   margin-left: 15%;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
-.landing-content h{
+.landing-content #hotshot{
   font-weight: bold;
   font-size: 60px;
 }
@@ -51,7 +51,7 @@ a{
   opacity: 0.4;
 }
 
-.landing-content p{
+.landing-content #extra{
   font-size: 25px;
   font-style: bold;
 }
@@ -79,7 +79,7 @@ footer{
   bottom: 0px; 
   background-color: #282c34;
   height: 250px;
-  width: 100vw;
+  width: 100%;
   color: white;
   padding-top: 10px;
 }
@@ -90,9 +90,10 @@ footer p{
 }
 
 .users{
-  position: absolute;
-  margin-left: 5%;
-  top: 10%;
+  margin-left: 3%;
+  width: 100%;
+  padding: 16px;
+  padding-inline: 20px;
 }
 
 .users h1{
@@ -101,21 +102,19 @@ footer p{
 
 .usersList{
   display: grid;
-  grid-template-columns: repeat(4, min(400px));
-  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin: 20px;
   gap: 50px;
+  width: 90%;
 }
 
 .userDetails{
   background-color: white;
-  box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
   width: 300px;
-  height: 200px;
+  height: 150px;
   border-radius: 10px;
   padding: 30px;
-  justify-content: center;
 }
 
 .userDetails:hover{

@@ -3,11 +3,11 @@ import { UserContext } from '../components/UserContext';
 
 export default function AlbumsPage() {
 
-    const {user} = useContext(UserContext);
+    const {session} = useContext(UserContext);
 
     return(
         <>
-            <p>{user.name}</p>
+            <p>{session?.name}</p>
         </>
     );
 }

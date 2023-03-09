@@ -7,7 +7,8 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import AlbumsPage from './pages/albums';
 import DefaultUser from './components/defaultUser';
 import { ContextWrapper } from './components/UserContext';
-
+import { UserContext } from './components/UserContext';
+import { useContext } from 'react';
 
 export default function App() {
  

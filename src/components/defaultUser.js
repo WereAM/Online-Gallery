@@ -2,25 +2,27 @@ import React, {useContext, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import LoginPage from '../pages/login';
 import { UserContext } from './UserContext';
+import { setSavedSession } from './session';
 
 export default function DefaultUser(){
 
-    const {user, setUser} = useContext(UserContext);
+    const {session, setSession} = useContext(UserContext);
 
     const defaultUser = {
         name : 'Michelle',
         password : 'michelle123'
     }
 
-    // const [user, setUser] = useState({name:''});
     const [error, setError] = useState('');; 
     const navigate = useNavigate();
     
     const Login = (details) => {    
         if(details.name === defaultUser.name && details.password === defaultUser.password) {
-            setUser({
-                name: details.name
+            setSession({
+                name:details.name
             });
+            // const name = details.name;
+            setSavedSession(details.name);
             navigate('/users');
             }else {
             setError('Details do not match!');
@@ -33,4 +35,3 @@ export default function DefaultUser(){
         </div>
     );
 }  
-

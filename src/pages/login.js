@@ -46,7 +46,7 @@ export default function LoginPage ({Login, error}){
                 <p>{(error!=='')  ? (<div className='error'>{error}</div>) : ''} </p>
             
             </form> 
-        </div>
+            </div>
         </div>
     );
 }
