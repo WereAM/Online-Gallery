@@ -3,37 +3,53 @@
 } */
 
 .App {
-  text-align: center;
-  min-width: 100vw;
+  width: 100vw;
 }
 
 .App-header {
-  background-color: #282c34;
-  height: 80px;
+  background-color: #e3d5ca; 
+  min-height: 8vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: medium;
   color: white;
-  overflow: hidden;
 } 
 
+.logo{
+  margin-left: 5%;
+}
+
+.logo img{
+  width:200px;
+  height:5vh;
+}
+
 a{
-  padding-inline: 20px;
+  padding: 20px;
+  margin: 5px 10px;
+}
+
+.links a{
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.links a:hover{
+  background-color: #d6ccc2;
   color: white;
 }
 
 .App-main{
+  background-color: #f5ebe0;
   min-height: 90vh;
-  background-color: lightslategrey;
   overflow: hidden;
-  min-width: 100vw;
+  width: 100vw;
 }
 
 .landing-content{
-  position: relative;
-  margin-left: 15%;
-  padding-top: 3%;
+  margin-left: 10%;
+  margin-top: 5%;
 }
 
 .landing-content #hotshot{
@@ -41,25 +57,41 @@ a{
   font-size: 60px;
 }
 
-.landing-content img{
-  position: absolute;
-  top: 20%;
-  left: 700px;
-  transform: rotate(-15deg);
-  height: 500px;
-  width: 800px;
-  opacity: 0.4;
-}
-
 .landing-content #extra{
   font-size: 25px;
   font-style: bold;
 }
 
-.landing-content button{
+.img1{
   position: absolute;
+  top: 13%;
+  left: 1000px;
+  height: 200px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.img2{
+  position: absolute;
+  top: 15%;
+  left: 1420px;
+  height: 180px;
+  width: 270px;
+  border-radius: 10px;
+}
+
+.img3{
+  position: absolute;
+  top: 35%;
+  left: 1000px;
+  height: 350px;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.landing-content button{
   color: #282c34;
-  background-color: white;
+  background-color: #e3d5ca;
   border-color: #282c34;
   border-radius: 10px;
   font-size: 25px;
@@ -68,27 +100,96 @@ a{
 }
 
 .landing-content button:hover{
-  background-color:#282c34 ;
-  color: white; 
+  background-color:#d6ccc2 ;
   cursor: pointer;
 }
 
-footer{
-  text-align: center;
+.footer{
   position: absolute;
   bottom: 0px; 
-  background-color: #282c34;
-  height: 250px;
-  width: 100%;
-  color: white;
-  padding-top: 10px;
+  background-color: #d6ccc2;
+  width: 100vw;
+  /* height: 300px; */
+  padding-top: 5px;
 }
 
-footer p{
+.footer img{
+  width:200px;
+  height:50px;
+  margin-left: 10%;
+}
+
+.footer-elements{
+  display: flex;
   padding: 10px;
-  font-size: 18px;
+  margin-left: 10%;  
+  gap: 30%;
+  flex-wrap: wrap;
 }
 
+.copyright{
+  text-align: center;
+  width: 95vw;
+  border-top: dashed #f5ebe0;
+  margin: auto;
+  padding: 10px;
+}
+
+.login{
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 20px;
+  width: 500px;
+  height: 500px;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.userIcon{
+  text-align: center;
+}
+
+.loginForm{
+  padding: 20px;
+}
+
+.loginForm input{
+  width: 460px;
+  height: 30px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid lightgrey;
+  padding: 0 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.loginBtn{
+  width: 480px;
+  height: 35px;
+  margin-top: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #d6ccc2;
+  border: none;
+}
+
+.loginBtn:hover{
+  cursor: pointer;
+  background-color: #e3d5ca;
+}
+
+.loginForm p{
+  color: red;
+  text-align: center;
+}
+
+.userIcon img{
+  border-radius: 50%;
+}
 .users{
   margin-left: 3%;
   width: 100%;
@@ -97,7 +198,7 @@ footer p{
 }
 
 .users h1{
-  color: white;
+  color: black;
 }
 
 .usersList{
@@ -118,7 +219,7 @@ footer p{
 }
 
 .userDetails:hover{
-  background-color: gainsboro;
+  background-color: #edede9;
 }
 
 .viewAlbums{
@@ -128,57 +229,4 @@ footer p{
 
 .viewAlbums:hover{
   cursor: pointer; 
-}
-
-.form{
-  position: absolute;
-  top: 25%;
-  left: 35%;
-}
-
-.login{
-  position: relative;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  background-color: gainsboro;
-  border-radius: 5px;
-  width: 500px;
-  height: 500px;
-  margin: auto;
-  padding: 30px;
-  font-size: 20px;
-  text-align: center;
-}
-
-.loginForm{
-  padding-top: 20px;
-  text-align: center;
-
-}
-
-.loginForm input{
-  width: 400px;
-  height: 30px;
-}
-
-.loginBtn{
-  margin-bottom: 50px;
-  width: 400px;
-  height: 80px;
-  margin: 50px;
-  font-size: 20px;
-  border-radius: 7px;
-  background-color: lightslategray;
-  color: white;
-}
-
-.loginBtn:hover{
-  cursor: pointer;
-}
-
-.loginForm p{
-  color: red;
-}
-
-.userIcon img{
-  border-radius: 50%;
 }
