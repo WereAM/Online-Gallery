@@ -258,13 +258,8 @@ a{
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
   width: 300px;
-<<<<<<< HEAD
-  height: 150px;
-  border-radius: 10px;
-=======
   height: 180px;
   border-radius: 15px;
->>>>>>> 0d9b35b (Added context hook to display)
   padding: 30px;
 }
 
